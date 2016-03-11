@@ -225,6 +225,13 @@ static NSString * const kElementMag = @"mag";
              */
             
             // search the entire string for "of ", and extract that last part of that string
+            NSRange rangeSearched = NSMakeRange(0, _currentParsedCharacterData.length);
+            NSRegularExpression *rangeException = [[NSRegularExpression alloc] initWithPattern:@"of" options:0 error:nil];
+            NSTextCheckingResult *  checkResult = [rangeException firstMatchInString:_currentParsedCharacterData options:0 range:rangeSearched];
+            
+            
+            
+            
             
         }
 
