@@ -226,19 +226,94 @@ static NSString * const kElementMag = @"mag";
             
             // search the entire string for "of ", and extract that last part of that string
             NSRange rangeSearched = NSMakeRange(0, _currentParsedCharacterData.length);
+            
             NSRegularExpression *rangeException = [[NSRegularExpression alloc] initWithPattern:@"of" options:0 error:nil];
+            
             NSTextCheckingResult *  checkResult = [rangeException firstMatchInString:_currentParsedCharacterData options:0 range:rangeSearched];
             
+            NSInteger starNumber = checkResult.range.location + checkResult.range.length;
             
+            NSRange extrange = NSMakeRange(starNumber, _currentParsedCharacterData.length - starNumber);
             
+            _currentEarthquakeObject.location = [_currentParsedCharacterData substringWithRange:extrange];
             
+            _seekDescription = NO;
+            
+        }
+        
+        else if ([elementName isEqualToString:kvalueKey])
+        {
+            if (_seekTime ) // en earth date time
+            {
+                _currentEarthquakeObject.date =  [self.dateFormatter dateFromString:_currentParsedCharacterData];
+                _seekTime = NO;
+            
+            }
+            else if (self.seekLatitude)
+            {
+                // end earth latitude
+                _currentEarthquakeObject.latitude = _currentParsedCharacterData.doubleValue;
+                _seekLatitude = NO;
+            }
+            else if (_seekLongitude)
+            {
+                // end earthquake longitude
+                _currentEarthquakeObject.longitude  = _currentParsedCharacterData.doubleValue;
+                _seekLongitude = NO;
+
+            }
+            else if (_seekMagnitude)
+            {
+                // end earth mag
+                _currentEarthquakeObject.magnitude = _currentParsedCharacterData.floatValue;
+                _seekMagnitude = NO;
+            }
             
         }
 
     }
-    
+    // Stop accumulating parsed character data. We won't start again until specific elements begin.
+    _accumulatingParsedCharacterData = NO;
 
 }
+
+
+/**
+ This method is called by the parser when it find parsed character data ("PCDATA") in an element. The parser is not guaranteed to deliver all of the parsed character data for an element in a single invocation, so it is necessary to accumulate character data until the end of the element is reached.
+ */
+
+- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
+    
+    if (self.accumulatingParsedCharacterData) {
+        // If the current element is one whose content we care about, append 'string'
+        // to the property that holds the content of the current element.
+        //
+        [self.currentParsedCharacterData appendString:string];
+    }
+}
+
+/**An error occurred while parsing the earthquake data: post the error as an NSNotification to our app delegate.
+*/
+
+- (void)handleEarthquakesError:(NSError *)parseError {
+    
+    assert([NSThread isMainThread]);
+    [[NSNotificationCenter defaultCenter] postNotificationName:[XMLParseOperation EarthquakeErrorNotificationName]
+                                                        object:self
+                                                      userInfo:@{[XMLParseOperation EarthquakeErrorKey ]: parseError}];
+}
+
+/**
+ An error occurred while parsing the earthquake data, pass the error to the main thread for handling.
+ (Note: don't report an error if we aborted the parse due to a max limit of earthquakes.)
+ */
+- (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError {
+    
+    if (parseError.code != NSXMLParserDelegateAbortedParseError && !self.didAbortParsing) {
+        [self performSelectorOnMainThread:@selector(handleEarthquakesError:) withObject:parseError waitUntilDone:NO];
+    }
+}
+
 
 // NSNotification name for sending earthquake data back to the app delegate
 
