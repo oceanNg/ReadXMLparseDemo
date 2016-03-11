@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RootViewController.h
 //  ReadXMLparseDemo
 //
 //  Created by duongnguyen on 3/11/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface RootViewController : UIViewController
 
 @end
-

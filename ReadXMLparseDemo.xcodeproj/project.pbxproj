@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		C8CF85501C9280A00038DA8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CF854F1C9280A00038DA8F /* main.m */; };
 		C8CF85531C9280A00038DA8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CF85521C9280A00038DA8F /* AppDelegate.m */; };
-		C8CF85561C9280A00038DA8F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CF85551C9280A00038DA8F /* ViewController.m */; };
 		C8CF85591C9280A00038DA8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8CF85571C9280A00038DA8F /* Main.storyboard */; };
 		C8CF855B1C9280A00038DA8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8CF855A1C9280A00038DA8F /* Assets.xcassets */; };
 		C8CF855E1C9280A00038DA8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8CF855C1C9280A00038DA8F /* LaunchScreen.storyboard */; };
 		C8CF85691C9280A00038DA8F /* ReadXMLparseDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CF85681C9280A00038DA8F /* ReadXMLparseDemoTests.m */; };
 		C8CF85741C9280A00038DA8F /* ReadXMLparseDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CF85731C9280A00038DA8F /* ReadXMLparseDemoUITests.m */; };
+		C8CF85891C92819E0038DA8F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CF85871C92819E0038DA8F /* RootViewController.m */; };
+		C8CF858A1C92819E0038DA8F /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8CF85881C92819E0038DA8F /* RootViewController.xib */; };
+		C8CF858E1C9286980038DA8F /* XMLParseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CF858C1C9286980038DA8F /* XMLParseTableViewCell.m */; };
+		C8CF858F1C9286980038DA8F /* XMLParseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8CF858D1C9286980038DA8F /* XMLParseTableViewCell.xib */; };
+		C8CF85941C9288870038DA8F /* EathquakeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CF85931C9288870038DA8F /* EathquakeModel.m */; };
+		C8CF85971C928ECE0038DA8F /* XMLParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CF85961C928ECE0038DA8F /* XMLParseOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +44,6 @@
 		C8CF854F1C9280A00038DA8F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C8CF85511C9280A00038DA8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C8CF85521C9280A00038DA8F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C8CF85541C9280A00038DA8F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C8CF85551C9280A00038DA8F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C8CF85581C9280A00038DA8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C8CF855A1C9280A00038DA8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8CF855D1C9280A00038DA8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +54,16 @@
 		C8CF856F1C9280A00038DA8F /* ReadXMLparseDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReadXMLparseDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8CF85731C9280A00038DA8F /* ReadXMLparseDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReadXMLparseDemoUITests.m; sourceTree = "<group>"; };
 		C8CF85751C9280A00038DA8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8CF85861C92819E0038DA8F /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		C8CF85871C92819E0038DA8F /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		C8CF85881C92819E0038DA8F /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		C8CF858B1C9286980038DA8F /* XMLParseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLParseTableViewCell.h; sourceTree = "<group>"; };
+		C8CF858C1C9286980038DA8F /* XMLParseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParseTableViewCell.m; sourceTree = "<group>"; };
+		C8CF858D1C9286980038DA8F /* XMLParseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMLParseTableViewCell.xib; sourceTree = "<group>"; };
+		C8CF85921C9288870038DA8F /* EathquakeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EathquakeModel.h; sourceTree = "<group>"; };
+		C8CF85931C9288870038DA8F /* EathquakeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EathquakeModel.m; sourceTree = "<group>"; };
+		C8CF85951C928ECE0038DA8F /* XMLParseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLParseOperation.h; sourceTree = "<group>"; };
+		C8CF85961C928ECE0038DA8F /* XMLParseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParseOperation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +114,10 @@
 		C8CF854D1C9280A00038DA8F /* ReadXMLparseDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C8CF85911C92883F0038DA8F /* Model */,
+				C8CF85901C92882D0038DA8F /* View */,
 				C8CF85511C9280A00038DA8F /* AppDelegate.h */,
 				C8CF85521C9280A00038DA8F /* AppDelegate.m */,
-				C8CF85541C9280A00038DA8F /* ViewController.h */,
-				C8CF85551C9280A00038DA8F /* ViewController.m */,
 				C8CF85571C9280A00038DA8F /* Main.storyboard */,
 				C8CF855A1C9280A00038DA8F /* Assets.xcassets */,
 				C8CF855C1C9280A00038DA8F /* LaunchScreen.storyboard */,
@@ -138,6 +151,30 @@
 				C8CF85751C9280A00038DA8F /* Info.plist */,
 			);
 			path = ReadXMLparseDemoUITests;
+			sourceTree = "<group>";
+		};
+		C8CF85901C92882D0038DA8F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C8CF85861C92819E0038DA8F /* RootViewController.h */,
+				C8CF85871C92819E0038DA8F /* RootViewController.m */,
+				C8CF85881C92819E0038DA8F /* RootViewController.xib */,
+				C8CF858B1C9286980038DA8F /* XMLParseTableViewCell.h */,
+				C8CF858C1C9286980038DA8F /* XMLParseTableViewCell.m */,
+				C8CF858D1C9286980038DA8F /* XMLParseTableViewCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C8CF85911C92883F0038DA8F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C8CF85921C9288870038DA8F /* EathquakeModel.h */,
+				C8CF85931C9288870038DA8F /* EathquakeModel.m */,
+				C8CF85951C928ECE0038DA8F /* XMLParseOperation.h */,
+				C8CF85961C928ECE0038DA8F /* XMLParseOperation.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +282,8 @@
 			files = (
 				C8CF855E1C9280A00038DA8F /* LaunchScreen.storyboard in Resources */,
 				C8CF855B1C9280A00038DA8F /* Assets.xcassets in Resources */,
+				C8CF858F1C9286980038DA8F /* XMLParseTableViewCell.xib in Resources */,
+				C8CF858A1C92819E0038DA8F /* RootViewController.xib in Resources */,
 				C8CF85591C9280A00038DA8F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,9 +309,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8CF85561C9280A00038DA8F /* ViewController.m in Sources */,
 				C8CF85531C9280A00038DA8F /* AppDelegate.m in Sources */,
+				C8CF85941C9288870038DA8F /* EathquakeModel.m in Sources */,
+				C8CF858E1C9286980038DA8F /* XMLParseTableViewCell.m in Sources */,
 				C8CF85501C9280A00038DA8F /* main.m in Sources */,
+				C8CF85891C92819E0038DA8F /* RootViewController.m in Sources */,
+				C8CF85971C928ECE0038DA8F /* XMLParseOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
